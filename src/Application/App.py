@@ -1,9 +1,11 @@
-from src.Services.ApiService import ApiService
+from src.Services.ApiServiceSaveCsv import ApiServiceSaveCsv
 
 
 class App:
-    def __init__(self):
-        self._api_service = ApiService()
+    URL = 'https://jsonplaceholder.typicode.com/todos/'
 
-    def api_service(self) -> ApiService:
-        return self._api_service
+    def __init__(self):
+        self._api_service_save_csv = ApiServiceSaveCsv(self.URL)
+
+    def api_service_save_csv(self) -> ApiServiceSaveCsv:
+        return self._api_service_save_csv

@@ -1,8 +1,6 @@
 #!/usr/bin/env python
-
 from src.Application.App import App
-
 
 app = App()
 
-app.api_service().run()
+app.api_service_save_csv().run()
